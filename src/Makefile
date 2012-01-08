@@ -5,7 +5,7 @@
 
 SOURCES=boot.o main.o monitor.o common.o
 
-CFLAGS=-nostdlib -nostdinc -fno-builtin -fno-stack-protector -Wall -Wextra 
+CFLAGS=-std=c99 -nostdlib -nostdinc -fno-builtin -fno-stack-protector -Wall -Wextra 
 LDFLAGS=-Tlink.ld
 ASFLAGS=-felf
 

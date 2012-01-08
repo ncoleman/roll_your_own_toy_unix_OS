@@ -25,7 +25,11 @@ int main(struct multiboot *mboot_ptr)
 {
   // All our initialisation calls will go in here.
   monitor_clear();
-  monitor_write("Hello world!");
+  monitor_write("Hello world!\n");
+  monitor_write_hex(12345678);
+  monitor_write("\n");
+  monitor_write_dec(12345678);
+  monitor_write("\n");
   return 0xDEADBABA;
 }
 

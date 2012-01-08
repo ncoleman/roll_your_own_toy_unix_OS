@@ -1,1 +1,7 @@
 tutorial_src
+*.o
+bochsout.txt
+kernel
+src/bochsout.txt
+src/kernel
+src/*.o
