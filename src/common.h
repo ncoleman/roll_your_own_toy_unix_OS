@@ -35,8 +35,13 @@ void outb(u16int port, u8int value);
 u8int inb(u16int port);
 u16int inw(u16int port);
 
-u16int memcpy(u32int *src, u32int *dest, u16int len);
-u16int memset(u32int *src, s8int * ch);
+void memcpy(u32int *src, u32int *dest, u16int len);
+void memset(u32int *src, s32int c, u16int len);
+
+// strlen returns length of string without terminating \0 character
+u16int strlen(const char *c); 
+// strcmp checks two strings; returns neg if s1 < s2, 0 if equal, pos if s1 > s2
+s16int strcmp(const char *s1, const char *s2);
 
 #endif
 

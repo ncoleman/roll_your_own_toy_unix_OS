@@ -41,10 +41,33 @@ u16int inw(u16int port)
    return ret;
 }
 
-u16int memcpy(u32int *src, u32int *dest, u16int len)
+void memcpy(u32int *src, u32int *dest, u16int len)
 {
+    while(len--) {
+	// no bounds checking, so dest < src+len if you are not careful
+	*src++ = *dest++ ;
+    }
 }
 
-u16int memset(u32int *src, s8int * ch)
+void memset(u32int *src, s32int c, u16int len)
 {
+    while(len--) {
+	*src++ = c;
+    }
+}
+
+u16int strlen(const char *c) {
+    // warning: no bounds checking
+    u16int i = 0;
+    while(c[i] != '\0')
+	i++;
+    return i-1;
+}
+
+s16int strcmp(const char *s1, const char *s2) {
+    int i = 0;
+    while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0') {
+	i++;
+    }
+    return (s16int)(s1[i] - s2[i]);
 }
