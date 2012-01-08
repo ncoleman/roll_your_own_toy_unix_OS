@@ -1,0 +1,2 @@
+bochsrc.txt romimage remove address parameter, no longer needed and causes bochs panic with ROM: System BIOS must end at 0xfffff
+
