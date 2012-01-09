@@ -1,4 +1,6 @@
-# Roll your own toy Unix-clone OS by James Malloy
+# Roll your own toy Unix-clone OS
+## My repository
+### of the Tutorial by James Malloy
 
 There are many tutorials on writing your own operating system.
 
